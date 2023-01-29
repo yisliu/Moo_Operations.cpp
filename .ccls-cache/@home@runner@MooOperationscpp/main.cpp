@@ -3,16 +3,20 @@
 #include <vector>
 using namespace std;
 
-int cal(vector <string> str){
+int cal(string str){
   int n = 0;
   int i = 0;
-  if(str[1] == "M"){
-    if(str.size()<2)
+  if(str[1] == 77){
+    // cout<<"HH";
+    if(str.size()<3)
+      cout<<endl<<"(-_-)";
       return -1;
   }
   string str2 = "MOO";
   while(i<str.size()){
-    if(str[i]!=str[i]){
+    // cout<<"\nLOL";
+    if(str[i]!=str2[i]){
+      // cout<<"WOAH!!!";
       n++;
       i++;
       continue;
@@ -20,19 +24,20 @@ int cal(vector <string> str){
     i++;
     continue;
   }
+  cout<<endl<<n;
   return n;
 }
 
 int main() {
-  int n;
+  int n = 0;
   cin>>n;
-  vector <string> str;
+  string str;
   for(int i = 0; i<n; i++){
-    cin>>str[i];
-    cout<<"hello";
+    cin>>str;
+    // cout<<"hello";
     int temp = cal(str);
-    cout<<temp;
-    str.pop_back();
+    // cout<<endl<<str<<endl;
+    cout<<temp<<" ";
     // //objective "MOO"
     // //replace first or last letter with opposite
     // //delete first or last letter
